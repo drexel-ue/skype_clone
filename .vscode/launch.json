@@ -90,6 +90,15 @@
                 "--track-widget-creation"
             ]
         },
+        {
+            "name": "iPhone 11 Pro",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "7A6F2B66-346D-43E3-9916-B9A342BEB6AC",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
     ],
     "compounds": [
         {
@@ -99,6 +108,7 @@
                 "2nd Android",
                 "Note 10+",
                 "iPhone 11 Pro Max",
+                "iPhone 11 Pro",
                 "iPhone 6",
                 "iPad 6th Gen",
                 "iPad Air 3rd Gen",
