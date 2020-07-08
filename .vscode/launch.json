@@ -1,0 +1,118 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Current Device",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "1st Android",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "emulator-5554",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "2nd Android",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "emulator-5556",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "Note 10+",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "R38MA0CKF7A",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPhone 6",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "dd75eef2f61c8a0385fc43c325b0c417d11535e0",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPad 6th Gen",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "d68099c0c1d5d3777afd34b30db4d9fdd21c636b",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPad Air 3rd Gen",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "46FA7C5C-7ED8-47D9-BB85-A6DED7CE80B0",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPad Pro (12.9-inch) (4th generation)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "F12C64A5-F06F-484F-959F-01751C72D4E8",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPad Pro (9.7-inch)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "9E728D07-A7CF-4223-B269-77BCC3E0272B",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+        {
+            "name": "iPhone 11 Pro Max",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "125A34AB-AB40-49F3-A61F-02FC2217E5E1",
+            "args": [
+                "--track-widget-creation"
+            ]
+        },
+    ],
+    "compounds": [
+        {
+            "name": "All Devices",
+            "configurations": [
+                "1st Android",
+                "2nd Android",
+                "Note 10+",
+                "iPhone 11 Pro Max",
+                "iPhone 6",
+                "iPad 6th Gen",
+                "iPad Air 3rd Gen",
+                "iPad Pro (12.9-inch) (4th generation)",
+                "iPad Pro (9.7-inch)",
+            ],
+        },
+        {
+            "name": "Real Devices",
+            "configurations": [
+                "Note 10+",
+                "iPhone 6",
+                "iPad 6th Gen",
+            ],
+        },
+    ]
+}
