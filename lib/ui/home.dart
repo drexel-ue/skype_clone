@@ -53,6 +53,13 @@ class _HomeState extends State<Home> {
                   color: _page == 0 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
                 ),
               ),
+              title: Text(
+                'Chats',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: _page == 0 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
+                ),
+              ),
             ),
             BottomNavigationBarItem(
               icon: GestureDetector(
@@ -64,6 +71,13 @@ class _HomeState extends State<Home> {
                   color: _page == 1 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
                 ),
               ),
+              title: Text(
+                'Calls',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: _page == 1 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
+                ),
+              ),
             ),
             BottomNavigationBarItem(
               icon: GestureDetector(
@@ -72,6 +86,13 @@ class _HomeState extends State<Home> {
                 },
                 child: Icon(
                   Icons.contacts,
+                  color: _page == 2 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
+                ),
+              ),
+              title: Text(
+                'Contacts',
+                style: TextStyle(
+                  fontSize: 14,
                   color: _page == 2 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
                 ),
               ),
