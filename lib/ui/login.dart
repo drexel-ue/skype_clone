@@ -20,7 +20,9 @@ class Login extends StatelessWidget {
           highlightColor: SkypeColors.senderColor,
           child: FlatButton(
             onPressed: () => _performLogin(context),
-            shape: RoundedRectangleBorder(),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
             child: Text(
               'LOGIN',
               style: TextStyle(
@@ -36,6 +38,13 @@ class Login extends StatelessWidget {
   }
 
   Future<void> _performLogin(BuildContext context) async {
+    showDialog(
+      context: context,
+      builder: (_) => Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+
     final user = await _methods.googleSignIn();
     if (user != null) await _authenticateUser(user, context);
   }
@@ -43,6 +52,7 @@ class Login extends StatelessWidget {
   Future<void> _authenticateUser(FirebaseUser user, BuildContext context) async {
     if (await _methods.authenticateUser(user)) _methods.addDataToDb(user);
 
+    Navigator.pop(context);
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (_) => Home()),
