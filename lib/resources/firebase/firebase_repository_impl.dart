@@ -60,4 +60,16 @@ class FirebaseRepositoryImpl extends FirebaseRepository {
     // convert that [User] to json and create a document in firebase database with that info.
     _firestore.collection('users').document(user.uid).setData(user.toJson());
   }
+
+  @override
+  Future<void> signOut() async {
+    // invalidate google session data.
+    await _googleSignIn.disconnect();
+
+    // mark user as signed out in google's eyes.
+    await _googleSignIn.signOut();
+
+    // invalidate firebase session data.
+    return _auth.signOut();
+  }
 }

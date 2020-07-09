@@ -15,4 +15,7 @@ abstract class FirebaseRepository {
 
   /// takes the given [FirebaseUser] and converts it to json to be stored in firebase database.
   Future<void> addDataToDb(FirebaseUser firebaseUser);
+
+  /// deletes the current user's session data.
+  Future<void> signOut();
 }
