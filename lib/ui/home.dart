@@ -42,16 +42,13 @@ class _HomeState extends State<Home> {
         padding: EdgeInsets.symmetric(vertical: 10),
         child: CupertinoTabBar(
           backgroundColor: SkypeColors.blackColor,
+          currentIndex: _page,
+          onTap: (int page) => _pageController.animateToPage(page, duration: const Duration(milliseconds: 250), curve: Curves.easeOut),
           items: [
             BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  _pageController.animateToPage(0, duration: const Duration(milliseconds: 250), curve: Curves.easeOut);
-                },
-                child: Icon(
-                  Icons.chat_bubble_outline,
-                  color: _page == 0 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
-                ),
+              icon: Icon(
+                Icons.chat_bubble_outline,
+                color: _page == 0 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
               ),
               title: Text(
                 'Chats',
@@ -62,14 +59,9 @@ class _HomeState extends State<Home> {
               ),
             ),
             BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  _pageController.animateToPage(1, duration: const Duration(milliseconds: 250), curve: Curves.easeOut);
-                },
-                child: Icon(
-                  Icons.phone,
-                  color: _page == 1 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
-                ),
+              icon: Icon(
+                Icons.phone,
+                color: _page == 1 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
               ),
               title: Text(
                 'Calls',
@@ -80,14 +72,9 @@ class _HomeState extends State<Home> {
               ),
             ),
             BottomNavigationBarItem(
-              icon: GestureDetector(
-                onTap: () {
-                  _pageController.animateToPage(2, duration: const Duration(milliseconds: 250), curve: Curves.easeOut);
-                },
-                child: Icon(
-                  Icons.contacts,
-                  color: _page == 2 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
-                ),
+              icon: Icon(
+                Icons.contacts,
+                color: _page == 2 ? SkypeColors.lightBlueColor : SkypeColors.greyColor,
               ),
               title: Text(
                 'Contacts',
