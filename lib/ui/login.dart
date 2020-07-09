@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:skype_clone/resources/firebase/firebase_repository_impl.dart';
 import 'package:skype_clone/ui/home.dart';
+import 'package:skype_clone/utils/skype_colors.dart';
 
 class Login extends StatelessWidget {
   Login({Key key}) : super(key: key);
@@ -11,15 +13,21 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: SkypeColors.blackColor,
       body: Center(
-        child: FlatButton(
-          onPressed: () => _performLogin(context),
-          child: Text(
-            'LOGIN',
-            style: TextStyle(
-              fontSize: 35,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2,
+        child: Shimmer.fromColors(
+          baseColor: SkypeColors.whiteColor,
+          highlightColor: SkypeColors.senderColor,
+          child: FlatButton(
+            onPressed: () => _performLogin(context),
+            shape: RoundedRectangleBorder(),
+            child: Text(
+              'LOGIN',
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+              ),
             ),
           ),
         ),
