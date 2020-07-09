@@ -31,6 +31,7 @@ class _HomeState extends State<Home> {
       backgroundColor: SkypeColors.blackColor,
       body: PageView(
         controller: _pageController,
+        physics: NeverScrollableScrollPhysics(),
         onPageChanged: (int page) => setState(() => _page = page),
         children: [
           Center(child: Text('Chat List Screen')),
