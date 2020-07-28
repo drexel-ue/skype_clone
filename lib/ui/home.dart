@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:skype_clone/ui/page_views/chat_list_screen.dart';
 import 'package:skype_clone/utils/skype_colors.dart';
 
 class Home extends StatefulWidget {
@@ -34,7 +35,7 @@ class _HomeState extends State<Home> {
         physics: NeverScrollableScrollPhysics(),
         onPageChanged: (int page) => setState(() => _page = page),
         children: [
-          Center(child: Text('Chat List Screen')),
+          const ChatListScreen(),
           Center(child: Text('Call Logs')),
           Center(child: Text('Contact Screen')),
         ],
